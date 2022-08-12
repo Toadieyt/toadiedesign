@@ -13,8 +13,11 @@ body {
 
 header {
     background: none;
-    width: 100%;
+    width: 90%;
     height: 200px;
+    margin: 0;
+    padding: 0;
+    top: 0;
     position: fixed;
     display: flex;
     flex-flow: row;
@@ -22,23 +25,26 @@ header {
     justify-content: space-between;
 }
 
-.header-text {
+header img {
+    width: 400px;
+    height: 200px;
+}
+
+.header-text, .footer-text {
     color: white;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     text-decoration: none;
     font-size: 25px;
-    margin-right: 100px;
-    margin-bottom: 50px;
-    position: absolute;
+    position: relative;
     transition: 0.3s ease;
 }
 
-.header-text:hover {
+.header-text:hover, .footer-text:hover {
     color: white;
 }
 
-.header-text::before {
+.header-text::before, .footer-text::before {
     content: "";
     position: absolute;
     display: block;
@@ -51,15 +57,24 @@ header {
     transition: transform 0.3s ease;
 }
 
-.header-text:hover::before {
+.header-text:hover::before, .footer-text:hover::before {
     transform: scaleX(1);
 }
 
-header > img {
-    width: 300px;
+.header-info {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 100px;
 }
 
 /*-------------MAIN-------------*/
+
+main {
+    margin: 0;
+    padding: 0;
+}
 
 .introduce {
     color: white;
@@ -93,11 +108,33 @@ div.text {
 .bta {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+    gap: 100px;
     margin-top: 100px;
-    width: 90%;
+    width: 95%;
     margin-bottom: 120px;
+}
+
+.bta img, .websites-logos {
+    transition: 0.3s;
+}
+
+.bta img:hover, .websites-logos:hover {
+    transform: scale(1.1);
+}
+
+.websites {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+    width: 100%;
+}
+
+.websites-logos {
+    width: 200px;
 }
 
 /*-------------FOOTER-------------*/
@@ -110,6 +147,7 @@ footer {
     font-family: 'Montserrat', sans-serif;
     min-height: 100px;
     width: 100%;
+    bottom: 0;
     background-color: black;
     color: white;
     text-align: center;
@@ -120,11 +158,17 @@ footer {
 @media (max-width: 1060px) {
     header {
         position: absolute;
+        height: 100px;
+        display: block;
+    }
+
+    header > img {
+        width: 200px;
+        height: 100px;
     }
 
     .header-text {
-        margin-top: 150px;
-        margin-right: 20px;
+        margin-right: 200px;
         font-size: 15px;
     }
 
@@ -136,5 +180,9 @@ footer {
         font-size: 20px;
         margin-right: 0;
         margin-left: 20px;
+    }
+
+    .bta img {
+        width: 300px;
     }
 }
