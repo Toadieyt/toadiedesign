@@ -13,7 +13,7 @@ body {
 
 header {
     background: none;
-    width: 90%;
+    width: 100%;
     height: 200px;
     margin: 0;
     padding: 0;
@@ -64,9 +64,10 @@ header img {
 .header-info {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    gap: 100px;
+    gap: 200px;
+    margin-right: 100px;
 }
 
 /*-------------MAIN-------------*/
@@ -105,6 +106,12 @@ div.text {
     justify-content: center;
 }
 
+.pricelist {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+}
+
 .bta {
     display: flex;
     flex-flow: row wrap;
@@ -137,6 +144,31 @@ div.text {
     width: 200px;
 }
 
+.contact {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 200px;
+    margin-top: 150px;
+    margin-bottom: 200px;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+}
+
+.contact div {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 50px;
+}
+
+section.image > img {
+    width: 1000px;
+}
+
 /*-------------FOOTER-------------*/
 
 footer {
@@ -162,18 +194,17 @@ footer {
         display: block;
     }
 
-    header > img {
-        width: 200px;
-        height: 100px;
-    }
-
     .header-text {
-        margin-right: 200px;
         font-size: 15px;
     }
 
     .header-text::before {
         height: 2px;
+    }
+
+    .header-info {
+        gap: 50px;
+        margin-right: 0;
     }
 
     .introduce {
@@ -182,7 +213,24 @@ footer {
         margin-left: 20px;
     }
 
+    .websites-logos {
+        width: 150px;
+    }
+
     .bta img {
         width: 300px;
     }
+
+    section.image > img {
+        width: 300px;
+    }
+
+    .banners-html section.image:not(.banners-html section.image:first-child) {
+        height: 300px;
+    }
+
+    section.image:first-child {
+        margin-bottom: -200px;
+    }
+
 }
