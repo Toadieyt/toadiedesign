@@ -32,13 +32,12 @@ header img {
 
 .header-text, .footer-text {
     color: white;
-    background-color: black;
-    padding-left: 20px;
-    padding-right: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding-left: 10px;
+    padding-right: 10px;
     padding-top: 10px;
     padding-bottom: 10px;
-    border-radius: 50px;
-    box-shadow: 0px 0px 20px black;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     text-decoration: none;
@@ -55,10 +54,10 @@ header img {
     content: "";
     position: absolute;
     display: block;
-    width: 90%;
+    width: 100%;
     height: 3px;
     bottom: -2px;
-    right: 8px;
+    right: 0;
     background-color: white;
     transform: scaleX(0);
     transition: transform 0.3s ease;
@@ -91,7 +90,7 @@ main {
     font-size: 40px;
 }
 
-section.image {
+section.image, section.image2, section.image3 {
     width: 100%;
     display: flex;
     align-items: center;
@@ -100,6 +99,24 @@ section.image {
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
+}
+
+section.image2 {
+    background: rgb(29,29,29);
+    background: -moz-linear-gradient(328deg, rgba(29,29,29,1) 0%, rgba(0,0,0,1) 50%, rgba(29,29,29,1) 100%);
+    background: -webkit-linear-gradient(328deg, rgba(29,29,29,1) 0%, rgba(0,0,0,1) 50%, rgba(29,29,29,1) 100%);
+    background: linear-gradient(328deg, rgba(29,29,29,1) 0%, rgba(0,0,0,1) 50%, rgba(29,29,29,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1d1d1d",endColorstr="#1d1d1d",GradientType=1);
+    height: 750px;
+}
+
+section.image3 {
+    background: rgb(29,29,29);
+    background: -moz-linear-gradient(328deg, rgba(29,29,29,1) 0%, rgba(0,0,0,1) 50%, rgba(29,29,29,1) 100%);
+    background: -webkit-linear-gradient(328deg, rgba(29,29,29,1) 0%, rgba(0,0,0,1) 50%, rgba(29,29,29,1) 100%);
+    background: linear-gradient(328deg, rgba(29,29,29,1) 0%, rgba(0,0,0,1) 50%, rgba(29,29,29,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1d1d1d",endColorstr="#1d1d1d",GradientType=1);
+    height: 500px;
 }
 
 div.text {
@@ -123,16 +140,25 @@ div.text {
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
-    gap: 100px;
+    gap: 50px;
     width: 95%;
+    background-color: none;
 }
 
-.bta img, .websites img, .websites a {
+.bta {
+    width: 80%;
+}
+
+.bta img, .websites img {
     border-radius: 20px;
+    box-shadow: 2px 10px 30px rgba(0, 0, 0, 0.2);
 }
 
-.websites a:hover {
-    border: solid 2px white;
+.bta img {
+    width: 400px;
+    height: 250px;
+    box-shadow: 2px 10px 30px rgba(0, 0, 0, 0.2);
+    transition: 0.3s ease;
 }
 
 .websites a:hover > p {
@@ -144,13 +170,14 @@ div.text {
 }
 
 .bta img:hover {
-    border: solid 2px white;
+    transform: scale(1.1);
 }
 
 .websites img {
     border-radius: 20px;
     width: 500px;
     height: 290px;
+    transition: 0.3s ease;
 }
 
 .websites p {
@@ -189,10 +216,6 @@ section.image > img {
 
 }
 
-.black-pricetext {
-    color: #F24998;
-}
-
 /*-------------FOOTER-------------*/
 
 footer {
@@ -221,6 +244,8 @@ footer {
     .header-text {
         margin-top: 40px;
         font-size: 20px;
+        background: none;
+        box-shadow: none;
     }
 
     .header-text::before {
@@ -228,7 +253,9 @@ footer {
     }
 
     .header-info {
-        gap: 50px;
+        margin-top: -10px;
+        flex-flow: column wrap;
+        gap: 0px;
         margin-right: 0;
     }
 
@@ -236,7 +263,9 @@ footer {
         font-size: 30px;
         margin-right: 0;
         margin-left: 20px;
+        padding-top: 100px;
     }
+
     .bta img {
         width: 300px;
     }
@@ -250,7 +279,19 @@ footer {
         font-size: 15px;
     }
 
-    section.image > img {
+    section.image2 { 
+        height: 1350px;
+    }
+
+    section.image2 img {
+        height: 200px;
+    }
+
+    section.image3 {
+        height: 750px
+    }
+
+    section > img {
         width: 300px;
     }
 
