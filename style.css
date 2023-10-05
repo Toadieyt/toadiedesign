@@ -40,7 +40,8 @@ header img {
 }
 
 .lang {
-    right: 10%;
+    margin-top: 15px;
+    right: 5%;
     position: absolute;
 }
 
@@ -86,7 +87,7 @@ main {
     margin-bottom: 200px;
 }
 
-.portfolio button {
+.btn_x {
     background: none;
     border: none;
     font-size: 40px;
@@ -229,8 +230,8 @@ footer p {
 }
 
 @media (max-width: 1060px) {
-    .header-title {
-        display: none;
+    .lang {
+        right: 15%;
     }
     .title {
         transform: scale(0.8);
@@ -240,6 +241,9 @@ footer p {
     }
     .btn:hover {
         transform: scale(0.8);
+    }
+    .btn_x {
+        font-size: 30px;
     }
     .portfolio {
         gap: 10px;
